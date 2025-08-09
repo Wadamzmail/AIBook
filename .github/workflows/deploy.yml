@@ -26,7 +26,10 @@ jobs:
         run: npm install   # fresh lock-file + install
 
       - name: Build project
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: npm run build
+
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
