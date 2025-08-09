@@ -1,13 +1,17 @@
+# .github/workflows/deploy.yml
 name: Deploy Vite App to GitHub Pages
 
 on:
   push:
     branches:
-      - main  # الفرع اللي حيبدأ البناء
+      - main
 
 jobs:
   build:
     runs-on: ubuntu-latest
+
+    permissions:          # ← ADD THIS BLOCK
+      contents: write     # allow push to gh-pages
 
     steps:
       - name: Checkout repository
@@ -20,7 +24,7 @@ jobs:
           cache: npm
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
       - name: Build project
         run: npm run build
