@@ -7,8 +7,8 @@ export default defineConfig(({ mode }) => {
     return {
         base: '/AIBook/',
         define: {
-            'process.env.API_KEY': JSON.stringify(env.GEMINI_API_KEY),
-            'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY)
+            'process.env.API_KEY': JSON.stringify('AIzaSyAURfMxHjSbVw-YsinQdn0PtKmdb4u3ns0'),
+            'process.env.GEMINI_API_KEY': JSON.stringify('AIzaSyAURfMxHjSbVw-YsinQdn0PtKmdb4u3ns0')
         },
         resolve: {
             alias: {
